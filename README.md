@@ -12,6 +12,18 @@ Haber metinlerini **Fake News** veya **Real News** olarak sınıflandıran makin
 
 ---
 
+## Dataset Kurulumu
+
+Bu repoda veri seti dosyaları yer almamaktadır. Kaggle üzerinden [Fake and Real News Dataset](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset) indirilmelidir.
+
+İndirilen dosyalar şu klasöre konulmalıdır:
+
+```
+data/
+├── Fake.csv
+└── True.csv
+```
+
 ## Kurulum
 
 ```bash
@@ -68,6 +80,10 @@ Test seti: 8.980 haber (%20 ayırma)
 | Precision | 98.88% |
 | Recall    | 99.18% |
 | F1 Score  | 99.03% |
+
+### Confusion Matrix Yorumu
+
+Confusion matrix, modelin Fake ve Real sınıflarında yaptığı doğru ve yanlış tahminleri gösterir. Bu proje için özellikle sahte haberlerin gerçek olarak tahmin edilmesi kritik bir hatadır; çünkü bu durumda kullanıcı sahte bir haberi gerçek sanabilir. Model test setinde yalnızca 35 sahte haberi gerçek olarak işaretlemiştir (4.284 gerçek haberden 35'i kaçırılmış, 4.696 sahte haberden 48'i yanlış sınıflandırılmıştır).
 
 ---
 
