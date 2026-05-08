@@ -1,4 +1,6 @@
 import re
+from pathlib import Path
+
 import joblib
 import nltk
 import streamlit as st
@@ -7,8 +9,9 @@ from nltk.corpus import stopwords
 nltk.download("stopwords", quiet=True)
 STOPWORDS = set(stopwords.words("english"))
 
-MODEL_PATH = "models/model.pkl"
-VECTORIZER_PATH = "models/vectorizer.pkl"
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "models" / "model.pkl"
+VECTORIZER_PATH = BASE_DIR / "models" / "vectorizer.pkl"
 
 
 @st.cache_resource

@@ -74,6 +74,10 @@ print(f"Precision: {precision_score(y_test, y_pred):.4f}")
 print(f"Recall:    {recall_score(y_test, y_pred):.4f}")
 print(f"F1 Score:  {f1_score(y_test, y_pred):.4f}")
 
+print("\nFake Precision:", precision_score(y_test, y_pred, pos_label=0))
+print("Fake Recall:   ", recall_score(y_test, y_pred, pos_label=0))
+print("Fake F1:       ", f1_score(y_test, y_pred, pos_label=0))
+
 print("\nConfusion Matrix:")
 print(confusion_matrix(y_test, y_pred))
 
