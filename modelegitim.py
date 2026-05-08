@@ -18,8 +18,8 @@ STOPWORDS = set(stopwords.words("english"))
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 MODEL_DIR = BASE_DIR / "models"
-MODEL_PATH = BASE_DIR / "models" / "model.pkl"
-VECTORIZER_PATH = BASE_DIR / "models" / "vectorizer.pkl"
+MODEL_PATH = MODEL_DIR / "model.pkl"
+VECTORIZER_PATH = MODEL_DIR / "vectorizer.pkl"
 
 MODEL_DIR.mkdir(exist_ok=True)
 
@@ -76,9 +76,9 @@ print(f"Precision: {precision_score(y_test, y_pred):.4f}")
 print(f"Recall:    {recall_score(y_test, y_pred):.4f}")
 print(f"F1 Score:  {f1_score(y_test, y_pred):.4f}")
 
-print("\nFake Precision:", precision_score(y_test, y_pred, pos_label=0))
-print("Fake Recall:   ", recall_score(y_test, y_pred, pos_label=0))
-print("Fake F1:       ", f1_score(y_test, y_pred, pos_label=0))
+print(f"Fake Precision: {precision_score(y_test, y_pred, pos_label=0):.4f}")
+print(f"Fake Recall:    {recall_score(y_test, y_pred, pos_label=0):.4f}")
+print(f"Fake F1:        {f1_score(y_test, y_pred, pos_label=0):.4f}")
 
 print("\nConfusion Matrix:")
 print(confusion_matrix(y_test, y_pred))
