@@ -18,6 +18,8 @@ STOPWORDS = set(stopwords.words("english"))
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 MODEL_DIR = BASE_DIR / "models"
+MODEL_PATH = BASE_DIR / "models" / "model.pkl"
+VECTORIZER_PATH = BASE_DIR / "models" / "vectorizer.pkl"
 
 MODEL_DIR.mkdir(exist_ok=True)
 
@@ -85,6 +87,6 @@ print("\nClassification Report:")
 print(classification_report(y_test, y_pred, target_names=["Fake", "Real"]))
 
 # Modeli kaydet
-joblib.dump(model, MODEL_DIR / "model.pkl")
-joblib.dump(vectorizer, MODEL_DIR / "vectorizer.pkl")
+joblib.dump(model, MODEL_PATH)
+joblib.dump(vectorizer, VECTORIZER_PATH)
 print("\nModel kaydedildi.")
