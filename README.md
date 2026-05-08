@@ -64,10 +64,10 @@ Test seti: 8.980 haber (%20 ayırma)
 
 | Metrik    | Değer  |
 |-----------|--------|
-| Accuracy  | 98.74% |
-| Precision | 98.28% |
-| Recall    | 99.09% |
-| F1 Score  | 98.68% |
+| Accuracy  | 99.08% |
+| Precision | 98.88% |
+| Recall    | 99.18% |
+| F1 Score  | 99.03% |
 
 ---
 
