@@ -27,7 +27,7 @@ data/
 ## Kurulum
 
 ```bash
-pip install pandas scikit-learn nltk joblib streamlit
+pip install -r requirements.txt
 ```
 
 ---
@@ -74,12 +74,12 @@ Fake News / Real News + Güven Yüzdesi
 
 Test seti: 8.980 haber (%20 ayırma)
 
-| Metrik    | Değer  |
-|-----------|--------|
-| Accuracy  | 99.08% |
-| Precision | 98.88% |
-| Recall    | 99.18% |
-| F1 Score  | 99.03% |
+| Metrik    | Değer   |
+|-----------|--------:|
+| Accuracy  | 99.08%  |
+| Precision | 98.88%  |
+| Recall    | 99.18%  |
+| F1 Score  | 99.03%  |
 
 ### Confusion Matrix Yorumu
 
