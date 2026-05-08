@@ -27,6 +27,8 @@ data/
 ## Kurulum
 
 ```bash
+git clone https://github.com/Zekuguryldz/gercekveyasahtehaberprojesi
+cd gercekveyasahtehaberprojesi
 pip install -r requirements.txt
 ```
 
@@ -45,6 +47,8 @@ Bu adım `models/model.pkl` ve `models/vectorizer.pkl` dosyalarını oluşturur.
 streamlit run app.py
 ```
 Tarayıcıda `http://localhost:8501` adresini aç.
+
+**Canlı uygulama:** https://gercekveyasahtehaberprojesi-chraracwhnhpbmehp4x89t.streamlit.app
 
 ---
 
@@ -80,6 +84,14 @@ Test seti: 8.980 haber (%20 ayırma)
 | Precision | 98.88%  |
 | Recall    | 99.18%  |
 | F1 Score  | 99.03%  |
+
+### Fake Sınıfı Metrikleri
+
+| Metrik         | Değer   |
+|----------------|--------:|
+| Fake Precision | 99.25%  |
+| Fake Recall    | 98.98%  |
+| Fake F1        | 99.12%  |
 
 ### Confusion Matrix Yorumu
 
